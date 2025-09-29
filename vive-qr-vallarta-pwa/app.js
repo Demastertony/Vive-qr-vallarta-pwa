@@ -44,3 +44,29 @@ fileInput?.addEventListener('change', async (e)=>{
   };
   img.src = URL.createObjectURL(file);
 });
+
+// Tilt suave para la pantalla y las tiles (respeta reduce motion)
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+
+  const tilt = (el, max=8) => {
+    let rect;
+    const measure = () => rect = el.getBoundingClientRect();
+    const move = (e) => {
+      if (!rect) measure();
+      const x = ((e.clientX ?? 0) - (rect.left + rect.width/2)) / (rect.width/2);
+      const y = ((e.clientY ?? 0) - (rect.top + rect.height/2)) / (rect.height/2);
+      el.style.transform = `perspective(900px) rotateY(${x*max}deg) rotateX(${-y*max}deg)`;
+    };
+    const reset = () => el.style.transform = '';
+    el.addEventListener('pointerenter', measure);
+    el.addEventListener('pointermove', move);
+    el.addEventListener('pointerleave', reset);
+  };
+
+  const screen = document.querySelector('.screen-pro');
+  const tiles  = document.querySelectorAll('.tile');
+  if (screen) tilt(screen, 6);
+  tiles.forEach(t => tilt(t, 4));
+})();
