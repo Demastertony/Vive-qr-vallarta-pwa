@@ -1,5 +1,6 @@
 // PWA cache + update (HTML network-first, assets cache-first)
-const CACHE = 'vive-qr-v9';
+const CACHE = 'vive-qr-v10'; // <- sube a v5 (o el número que siga)
+
 
 const ASSETS = [
   '/', '/index.html', '/styles.css', '/app.js',
