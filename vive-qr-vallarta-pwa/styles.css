@@ -1,0 +1,23 @@
+
+:root{
+  --green:#0bbf72;
+  --bg:#0f1323;
+  --card:#151a2e;
+  --text:#e9ecf1;
+  --muted:#9aa3b2;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu}
+.top{display:flex;align-items:center;gap:12px;padding:18px 16px;position:sticky;top:0;background:linear-gradient(180deg,rgba(15,19,35,.9),rgba(15,19,35,.6));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
+h1{font-size:20px;margin:0}
+h1 .qr{color:var(--green);font-weight:800}
+.slogan{margin:0;color:var(--muted);font-size:13px}
+main{max-width:860px;margin:18px auto;padding:0 14px;display:grid;gap:16px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.card h2{margin-top:0}
+button{appearance:none;border:0;border-radius:12px;padding:12px 16px;background:var(--green);color:#031d10;font-weight:700;cursor:pointer}
+button:active{transform:translateY(1px)}
+.small{color:var(--muted);font-size:12px}
+footer{padding:40px 16px;color:var(--muted);text-align:center}
+.note{background:#103d2b;border:1px solid #1dda8b;color:#b7ffd9;padding:10px;border-radius:10px;margin-top:8px}
+canvas{display:block;margin-top:10px;background:#0002;border-radius:10px}

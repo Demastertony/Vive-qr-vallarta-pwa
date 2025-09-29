@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0bbf72">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/icons/icon-192.png" type="image/png">
+  <title>VIVE QR VALLARTA — tu guía turística inteligente</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <img src="/assets/icons/icon-192.png" alt="VIVE QR VALLARTA" width="48" height="48">
+    <h1>VIVE <span class="qr">QR</span> VALLARTA</h1>
+    <p class="slogan">tu guía turística inteligente</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Instálala como App</h2>
+      <p>Funciona sin internet, se agrega al inicio y es ligerita.</p>
+      <button id="btnInstall" hidden>Instalar</button>
+      <div id="installedNote" class="note" hidden>✔️ Ya está instalada.</div>
+    </section>
+
+    <section class="card">
+      <h2>Escanear QR (demo offline)</h2>
+      <p>Usa la cámara para leer un código QR. (Modo demo sin librerías pesadas.)</p>
+      <input id="fileInput" type="file" accept="image/*" capture="environment">
+      <canvas id="preview" width="320" height="240" aria-label="vista previa"></canvas>
+      <p class="small">Para un lector 100% real podemos integrar una librería ligera más adelante.</p>
+    </section>
+
+    <section class="card">
+      <h2>Contenido Offline</h2>
+      <ul>
+        <li>Home y estilos se guardan en tu dispositivo</li>
+        <li>Abre sin internet</li>
+        <li>Actualiza en segundo plano cuando haya conexión</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> VIVE QR VALLARTA</p>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
