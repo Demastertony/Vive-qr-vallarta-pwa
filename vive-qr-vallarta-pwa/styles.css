@@ -167,15 +167,20 @@ main{ max-width:620px; margin: clamp(6px, 1.6vh, 14px) auto; padding:0 16px; }
   margin-top: clamp(2px, .6vh, 6px);
 }
 
-/* ── 6) Botón con más presencia ─────────────────────────────────────────────── */
+/* ====== CTA súper pill con “sheen” ====== */
 .cta{
-  width: 100%; max-width: 290px;
-  padding: clamp(14px, 3.6vw, 18px);
-  border-radius: clamp(18px, 4.8vw, 26px);
-  font-weight: 900;
+  margin: clamp(10px, 1.6vh, 16px) auto 6px;
+  display:block; width:100%; max-width: min(520px, 82%);
+  text-align:center; text-decoration:none; font-weight:900;
+  color:#042d1c; padding: clamp(14px, 2vh, 16px) 18px; border-radius:999px;
+
+  background: linear-gradient(145deg, #22e092, #09b96d);
+  border:1px solid rgba(255,255,255,.10);
   box-shadow:
-    0 22px 40px rgba(0,0,0,.38),
-    inset 0 0 0 1px rgba(255,255,255,.06);
+    0 24px 46px rgba(0,0,0,.38),        /* sombra exterior fuerte */
+    inset 3px 3px 6px rgba(255,255,255,.15), /* highlight interno */
+    inset -10px -10px 22px rgba(0,0,0,.22);  /* sombra interna */
+  position:relative; overflow:hidden;
 }
 
 .cta::after{
