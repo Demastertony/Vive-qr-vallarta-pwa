@@ -17,29 +17,43 @@
   </header>
 
   <main>
-    <section class="card">
-      <h2>Instálala como App</h2>
-      <p>Funciona sin internet, se agrega al inicio y es ligerita.</p>
-      <button id="btnInstall" hidden>Instalar</button>
-      <div id="installedNote" class="note" hidden>✔️ Ya está instalada.</div>
-    </section>
+    <!-- HERO — CARCAZA VERDE 3D -->
+<section class="phone-hero" id="home">
+  <div class="device">
+    <div class="notch"></div>
 
-    <section class="card">
-      <h2>Escanear QR (demo offline)</h2>
-      <p>Usa la cámara para leer un código QR. (Modo demo sin librerías pesadas.)</p>
-      <input id="fileInput" type="file" accept="image/*" capture="environment">
-      <canvas id="preview" width="320" height="240" aria-label="vista previa"></canvas>
-      <p class="small">Para un lector 100% real podemos integrar una librería ligera más adelante.</p>
-    </section>
+    <div class="screen">
+      <h1 class="app-title">VIVE QR VALLARTA</h1>
+      <p class="app-sub">Tu experiencia Vallarta, en la palma de tu mano</p>
 
-    <section class="card">
-      <h2>Contenido Offline</h2>
-      <ul>
-        <li>Home y estilos se guardan en tu dispositivo</li>
-        <li>Abre sin internet</li>
-        <li>Actualiza en segundo plano cuando haya conexión</li>
-      </ul>
-    </section>
+      <div class="quick-grid">
+        <!-- Espacios para íconos: reemplaza cada .icon-slot por <img class="icon" src="/assets/ui/turista.png" alt="Turista"> cuando subas tus PNG -->
+        <button class="quick-btn">
+          <div class="icon-slot" data-label="Turista"></div>
+          <span>Turista</span>
+        </button>
+
+        <button class="quick-btn">
+          <div class="icon-slot" data-label="Antros"></div>
+          <span>Antros</span>
+        </button>
+
+        <button class="quick-btn">
+          <div class="icon-slot" data-label="Hoteles"></div>
+          <span>Hoteles</span>
+        </button>
+
+        <button class="quick-btn">
+          <div class="icon-slot" data-label="Restaurantes"></div>
+          <span>Restaurantes</span>
+        </button>
+      </div>
+
+      <a class="cta-start" href="#app">Comenzar</a>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer>
