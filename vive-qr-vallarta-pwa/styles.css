@@ -127,3 +127,9 @@ canvas{display:block;margin-top:10px;background:#0002;border-radius:10px}
   .phone-hero{ padding-top:40px; padding-bottom:20px; }
   .device{ transform: perspective(1400px) rotateY(-12deg) rotateX(2deg) translateX(-10px); }
 }
+
+.app-logo{
+  width:120px; max-width:55%;
+  margin:0 auto 4px; display:block;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+}
