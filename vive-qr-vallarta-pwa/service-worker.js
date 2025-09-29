@@ -1,6 +1,6 @@
 
 // Simple offline-first cache
-const CACHE = 'vive-qr-v1';
+const CACHE = 'vive-qr-v2'; // antes v1
 const ASSETS = [
   '/', '/index.html', '/styles.css', '/app.js',
   '/assets/icons/icon-192.png', '/assets/icons/icon-512.png',
