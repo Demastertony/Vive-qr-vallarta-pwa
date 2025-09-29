@@ -178,11 +178,7 @@ main{ max-width:620px; margin: clamp(6px, 1.6vh, 14px) auto; padding:0 16px; }
     inset 0 0 0 1px rgba(255,255,255,.06);
 }
 
-.cta::after{
-  content:""; position:absolute; top:0; left:-40%; width:40%; height:100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
-  transform: skewX(-20deg); animation: sheen 3.6s infinite;
-}
+
 @keyframes sheen{ 0%{left:-40%} 60%{left:140%} 100%{left:140%} }
 .cta:active{ transform: translateY(1px) }
 
