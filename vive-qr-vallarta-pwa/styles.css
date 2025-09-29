@@ -21,3 +21,109 @@ button:active{transform:translateY(1px)}
 footer{padding:40px 16px;color:var(--muted);text-align:center}
 .note{background:#103d2b;border:1px solid #1dda8b;color:#b7ffd9;padding:10px;border-radius:10px;margin-top:8px}
 canvas{display:block;margin-top:10px;background:#0002;border-radius:10px}
+
+/* ===== CARCAZA VERDE 3D ===== */
+:root{
+  --g:#0bbf72;           /* verde principal */
+  --g-dk:#0a8a54;        /* verde oscuro */
+  --g-lt:#19d285;        /* verde claro */
+  --green-glow: rgba(25, 210, 133, .35);
+}
+
+.phone-hero{
+  display:grid; place-items:center;
+  padding:32px 16px 12px;
+}
+
+.device{
+  width:min(92vw,360px); height:min(170vw,720px);
+  border-radius:34px;
+  background: linear-gradient(145deg, var(--g-lt), var(--g-dk));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.45),
+    inset -10px -10px 24px rgba(255,255,255,.06),
+    inset 12px 12px 28px rgba(0,0,0,.35);
+  position:relative;
+  transform: perspective(1200px) rotateY(-10deg) rotateX(2deg);
+}
+
+.device .notch{
+  position:absolute; top:8px; left:50%; transform:translateX(-50%);
+  width:42%; height:22px; background:rgba(0,0,0,.18);
+  border-radius:0 0 16px 16px;
+  box-shadow: inset 0 4px 8px rgba(255,255,255,.06), inset 0 -6px 14px rgba(0,0,0,.32);
+}
+
+.screen{
+  position:absolute; inset:14px;
+  border-radius:26px;
+  background: linear-gradient(145deg, var(--g), var(--g-dk));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:
+    inset 10px 10px 26px rgba(0,0,0,.35),
+    inset -8px -8px 20px rgba(255,255,255,.06);
+  padding:22px 18px;
+  display:flex; flex-direction:column; gap:16px;
+  color:#eaf6ee;
+  text-align:center;
+}
+
+.app-title{
+  margin:8px 0 0; font-size:28px; letter-spacing:.6px; line-height:1.05;
+  text-shadow: 0 2px 0 rgba(0,0,0,.25);
+}
+.app-sub{
+  margin:0; font-size:14px; color:#d3ffe9;
+  opacity:.9;
+}
+
+.quick-grid{
+  margin-top:6px;
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+}
+
+.quick-btn{
+  appearance:none; border:0; cursor:pointer;
+  display:grid; place-items:center; gap:8px; padding:14px 10px;
+  border-radius:18px;
+  color:#eaf6ee; background: linear-gradient(145deg, var(--g), var(--g-dk));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:
+    6px 6px 16px rgba(0,0,0,.35),
+    -6px -6px 14px rgba(255,255,255,.06),
+    inset 0 0 0 1px rgba(255,255,255,.03);
+  transition: transform .08s ease;
+}
+.quick-btn:active{ transform: translateY(1px) scale(.995); }
+
+.icon{
+  width:64px; height:64px; object-fit:contain;
+  filter: drop-shadow(0 6px 12px var(--green-glow));
+}
+
+/* Placeholder mientras subes iconos */
+.icon-slot{
+  width:64px; height:64px; border-radius:14px;
+  display:grid; place-items:center;
+  background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(0,0,0,.18));
+  border:1px dashed rgba(255,255,255,.25);
+  color:#eaf6ee; font-size:12px; opacity:.9;
+}
+.icon-slot::after{ content: attr(data-label); }
+
+.cta-start{
+  margin-top:auto;
+  display:block; text-decoration:none; text-align:center;
+  padding:14px 18px; border-radius:18px; font-weight:800;
+  color:#073a23; background:linear-gradient(145deg, #22e092, #08b768);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.05);
+}
+.cta-start:active{ transform: translateY(1px); }
+
+/* Desktop: centra y dale presencia */
+@media (min-width: 900px){
+  .phone-hero{ padding-top:40px; padding-bottom:20px; }
+  .device{ transform: perspective(1400px) rotateY(-12deg) rotateX(2deg) translateX(-10px); }
+}
